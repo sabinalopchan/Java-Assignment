@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="backend/fragment :: headtag">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:replace="backend/fragment :: header"></div>
+<div th:replace="backend/fragment :: sidebar"></div>
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Welcome to Dashboard</h1>
+<!--        <nav>-->
+<!--            <ol class="breadcrumb">-->
+<!--                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>-->
+<!--                <li class="breadcrumb-item active">Dashboard</li>-->
+<!--            </ol>-->
+<!--        </nav>-->
+    </div><!-- End Page Title -->
+
+
+</main>
+<div th:insert="backend/fragment :: footer"></div>
+</body>
+</html>

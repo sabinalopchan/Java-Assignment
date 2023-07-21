@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="backend/fragment :: headtag">
+    <meta charset="UTF-8">
+<!--    <title>Title</title>-->
+</head>
+<body>
+<div th:replace="backend/fragment :: header"></div>
+<div th:replace="backend/fragment :: sidebar"></div>
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> <i class="bi bi-eye"></i> Show Category</h5>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+<!--                                <th scope="col">S.N</th>-->
+<!--                                <th scope="col">Title</th>-->
+<!--                                <th scope="col">Action</th>-->
+                                <th>S.N</th>
+                                <th>Title</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+<!--                            <p th:if="${successMsg}" th:text="${successMsg}"></p>-->
+                            <p th:if="${deleteMsg}" th:text="${deleteMsg}"></p>
+                            <tr th:each="category:${categories}">
+                                <td th:text="${category.id}"></td>
+                                <td th:text="${category.name}"></td>
+                                <td>
+                                    <form action="">
+                                        <a href="" th:href="@{/user/dash/category/update/{id}(id=${category.id})}" class="btn small btn-primary" ><i class="bi bi-pencil-square"></i></a>
+                                        <a href="" th:href="@{/user/dash/category/delete/{id}(id=${category.id})}" class="btn small btn-danger"> <i class="bi bi-trash"></i></a>
+                                    </form>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<div th:insert="backend/fragment :: footer"></div>
+
+</body>
+</html>
+

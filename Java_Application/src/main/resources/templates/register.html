@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragment :: headtag">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <div class="container-fluid register">
+            <div class="row">
+                <div class="col-md-6 register-content">
+                    <h3><i class="fa fa-registered"></i>&ensp;  Register Now </h3>
+
+                    <div th:if="${session.message}"
+                    th:classappend="${session.message}" class="alert alert-success" role="alert">
+                        <p th:text="${session.message}"></p>
+<!--                        <th:block th:text="${#session.removeAttribute('message')}"></th:block>-->
+
+                    </div>
+
+                    <form method="post" th:action="@{/register}" th:object="${user}">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span>*</span>
+                                <a style="color: red;"></a>
+                            </label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" required/>
+<!--                            <input type="text" id="firstName" required th:field="*{firstName}" th:value="${user.firstName}" class="form-control"/>-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span>*</span>
+                                <a style="color: red;"></a>
+                            </label>
+                            <input type="text" id="email" name="email" class="form-control" required/>
+
+                            <!--                            <input type="text" id="email" required th:field="*{email}" th:value="${user.email}" class="form-control">-->
+
+                        </div>  <div class="form-group">
+                            <label for="address">Address <span>*</span>
+                                <a style="color: red;"></a>
+                            </label>
+                            <input type="text" id="address" name="address" class="form-control" required/>
+
+                            <!--                            <input type="text" id="email" required th:field="*{email}" th:value="${user.email}" class="form-control">-->
+
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password <span>*</span>
+                                <a style="color: red;"></a>
+                            </label>
+                            <input type="password" id="password" name="password" class="form-control" required/>
+
+                            <!--                            <input type="password" id="password" required th:field="*{password}" th:value="${user.password}" class="form-control">-->
+
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary">Register</button>
+                        </div>
+                        <p>Already have an account? <a href="login">Login</a></p>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- End Page Title -->
+
+
+</main>
+</body>
+</html>
+
