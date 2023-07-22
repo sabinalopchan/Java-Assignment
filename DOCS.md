@@ -26,6 +26,6 @@ Database Configuration
 •	Create database for application.
 •	Update database configuration in “application.properties”. Replace values with your database credentials :  
               spring.datasource.url=jdbc:mysql://localhost:3307/java_application
-spring.datasource.username=root
-spring.datasource.password=
+              spring.datasource.username=root
+              spring.datasource.password=
 ```
