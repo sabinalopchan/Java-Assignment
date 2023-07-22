@@ -1,3 +1,4 @@
+'''
 Technologies Used 
 •	Java
 •	Spring Boot
@@ -8,7 +9,7 @@ Technologies Used
 •	MySQL
 
 To Run program locally, ensure to have following installed on your system:
-•	Java Development Kit(JDK) 17 or above
+•	Java Development Kit(JDK) 8 or above
 •	Maven
 •	Database (MySQL)
 
@@ -26,5 +27,4 @@ Database Configuration
               spring.datasource.url=jdbc:mysql://localhost:3307/java_application
 spring.datasource.username=root
 spring.datasource.password=
-
-
+'''
