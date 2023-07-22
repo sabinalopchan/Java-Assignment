@@ -16,7 +16,7 @@ To Run program locally, ensure to have following installed on your system:
 
 Setup Steps
 •	git clone https://github.com/sabinalopchan/Java-Assignment
-•	cd java_application
+•	cd Java_Application
 •	mvn clean install
 •	mvn spring-boot:run
 •	Once the application is up and running, access it web browser by navigating to:
