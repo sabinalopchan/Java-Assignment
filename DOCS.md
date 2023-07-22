@@ -1,4 +1,5 @@
-'''
+
+```
 Technologies Used 
 •	Java
 •	Spring Boot
@@ -27,4 +28,4 @@ Database Configuration
               spring.datasource.url=jdbc:mysql://localhost:3307/java_application
 spring.datasource.username=root
 spring.datasource.password=
-'''
+```
